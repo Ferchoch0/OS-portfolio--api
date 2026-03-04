@@ -22,6 +22,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             $project = $model->getProjectById($id);
             echo json_encode($project);
             break;
+        case 'getProjectHome':
+            $position = $_GET['position'] ?? null;
+            $project = $model->getProjectHome($position);
+            echo json_encode($project);
+            break;
         default:
             echo json_encode(['message' => 'Acción no válida']);
             break;

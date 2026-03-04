@@ -22,6 +22,12 @@ class ProjectModel {
         $result = $this->conn->query($query);
         return $result->fetch_assoc();
     }
+
+    public function getProjectHome($position) {
+        $query = "SELECT * FROM projects WHERE home_position = $position";
+        $result = $this->conn->query($query);
+        return $result->fetch_assoc();
+    }
 }
 
 ?>
