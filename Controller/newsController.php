@@ -1,8 +1,8 @@
 <?php
 
-require_once '..Model/cors.php';
-require_once '..Model/connection.php';
-require_once '..Model/newsModel.php';
+require_once '../Model/cors.php';
+require_once '../Model/connection.php';
+require_once '../Model/newsModel.php';
 
 header('Content-Type: application/json');
 

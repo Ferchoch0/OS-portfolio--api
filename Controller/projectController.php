@@ -1,8 +1,10 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
-require_once '..Model/cors.php';
-require_once '..Model/connection.php';
-require_once '..Model/projectModel.php';
+require_once '../Model/cors.php';
+require_once '../Model/connection.php';
+require_once '../Model/projectModel.php';
 
 header('Content-Type: application/json');
 
