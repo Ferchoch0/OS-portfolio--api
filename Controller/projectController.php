@@ -9,7 +9,6 @@ header('Content-Type: application/json');
 $model = new ProjectModel($conn);
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-
     $action = $_GET['action'] ?? null;
 
     switch ($action) {
@@ -23,8 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             echo json_encode($project);
             break;
         case 'getProjectHome':
-            $position = $_GET['position'] ?? null;
-            $project = $model->getProjectHome($position);
+            $project = $model->getProjectHome();
             echo json_encode($project);
             break;
         default:
